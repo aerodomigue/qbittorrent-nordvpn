@@ -1,7 +1,5 @@
 FROM linuxserver/qbittorrent:latest
 
-ARG NORDVPN_VERSION=3.8.1
-
 LABEL maintainer="aerodomigue"
 
 HEALTHCHECK --interval=1m --timeout=20s --start-period=1m \
