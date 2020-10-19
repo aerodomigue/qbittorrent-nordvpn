@@ -1,0 +1,26 @@
+name: Build docker image and push | $GITHUB_REPOSITORY
+
+on:
+  push:
+    branches: 
+    - master
+  schedule:
+  - cron: "0 6 * * *"
+  
+  
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag $GITHUB_REPOSITORY
+    - name: Docker login
+      run:  echo "${{ secrets.CR_PAT }}" | docker login -u ${{ github.actor }} --password-stdin
+    - name: Tag the docker image
+      run:  docker tag $GITHUB_REPOSITORY $GITHUB_REPOSITORY:latest
+    - name: Push the docker image
+      run:  docker push $GITHUB_REPOSITORY:latest
