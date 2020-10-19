@@ -4,6 +4,8 @@ Combines latest linuxserver/qbittorrent with nordvpn
 
 # Use docker compose to deploy
 ```
+version: '3'
+services:
   qbittorrent-nordvpn:
         image: aerodomigue/qbittorrent-nordvpn:latest
         container_name: qbittorrent-nordvpn
@@ -14,7 +16,7 @@ Combines latest linuxserver/qbittorrent with nordvpn
         devices:
           - /dev/net/tun                    # Required
         ports:
-          - 8090:8090
+          - 8080:8080
           - 6882:6881
           - 6882:6881/udp
         volumes:
@@ -22,14 +24,14 @@ Combines latest linuxserver/qbittorrent with nordvpn
           - /media/torrents:/torrents
           - /media/downloads:/downloads
         environment:
-          - TZ=US/Eastern
+          - TZ=europe/paris
           - PGID=1000
           - PUID=1000
-          - WEBUI_PORT=8090
+          - WEBUI_PORT=8080
           - USER=USERNAME                   # Required
           - PASS=PASSWORD                   # Required
           - TECHNOLOGY=NordLynx
-          - CONNECT=--group p2p Canada
+          - CONNECT=--group p2p France
           - KILL_SWITCH=on                  # on|custom|off
           - PORTS=8080
 ```
