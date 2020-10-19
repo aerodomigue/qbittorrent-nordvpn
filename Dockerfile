@@ -11,7 +11,7 @@ RUN addgroup --system vpn && \
 
 RUN nord_vpn_version=$(curl -s https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/ | grep -o ">nordvpn_.*_amd64.deb" | tail -n 1 | egrep -o "([0-9]{1,}\.)+[0-9]{1,}") && \
     { wget -nc https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn_$nord_vpn_version\_amd64.deb  && dpkg -i nordvpn_$nord_vpn_version\_amd64.deb } || \
-    { wget -nc https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn_$nord_vpn_version\_arm64.deb  && dpkg -i nordvpn_$nord_vpn_version\_arm64.deb } &&
+    { wget -nc https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn_$nord_vpn_version\_arm64.deb  && dpkg -i nordvpn_$nord_vpn_version\_arm64.deb } && \
     rm -rf \
         ./nordvpn* \
         /tmp/* \
