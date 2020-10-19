@@ -1,5 +1,5 @@
 # docker-qbittorrent-nordvpn
-Combines latest linuxserver/qbittorrent with nordvpn
+Combines latest linuxserver/qbittorrent with nordvpn and script from wizz752, daily build from latest linuxserver/qbittorrent and nordvpn-cli
 
 
 # Use docker compose to deploy
@@ -24,7 +24,7 @@ services:
           - /media/torrents:/torrents
           - /media/downloads:/downloads
         environment:
-          - TZ=europe/paris
+          - TZ=Europe/Paris
           - PGID=1000
           - PUID=1000
           - WEBUI_PORT=8080
