@@ -1,4 +1,4 @@
-name: Build docker image and push | $GITHUB_REPOSITORY
+name: Build docker image and push | ${{ github.repository }}
 
 on:
   push:
