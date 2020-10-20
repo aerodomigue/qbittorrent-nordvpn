@@ -1,4 +1,4 @@
-![Build docker image and push](https://github.com/aerodomigue/qbittorrent-nordvpn/workflows/Build%20docker%20image%20and%20push/badge.svg)   
+![Build docker image and push](https://github.com/aerodomigue/qbittorrent-nordvpn/workflows/Build%20docker%20image/badge.svg)   
 ![Daily build and push](https://github.com/aerodomigue/qbittorrent-nordvpn/workflows/Daily%20build%20and%20push/badge.svg)
 
 
