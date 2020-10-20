@@ -1,4 +1,4 @@
-FROM linuxserver/qbittorrent:amd64-latest
+FROM linuxserver/qbittorrent:arm64v8-latest
 
 LABEL maintainer="aerodomigue"
 ARG TARGETARCH
