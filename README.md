@@ -5,9 +5,9 @@ Combines linuxserver/qbittorrent with nordvpn and script from wizz752, daily bui
 
 | Architecture | Tag |
 | :----: | --- |
-| x64 | latest |
-| arm64 | latest |
-| armhf | latest |
+| x64 | amd64-latest |
+| arm64 | armv8-latest |
+| armhf | armhf-latest |
 
 
 # Use docker compose to deploy
