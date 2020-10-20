@@ -26,8 +26,9 @@ jobs:
       with:
           username: ${{ github.actor }}
           password: ${{ secrets.CR_PAT }}
+
     - 
-      name: Build the Docker image
+      name: Build the Docker image all latest
       uses: docker/build-push-action@v2
       with:
           context: .
@@ -36,3 +37,33 @@ jobs:
           push: True
           tags: |
            ${{ github.repository }}:latest
+    - 
+      name: Build the Docker image all latest
+      uses: docker/build-push-action@v2
+      with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64
+          push: True
+          tags: |
+           ${{ github.repository }}:amd64-latest
+    - 
+      name: Build the Docker armV8 latest
+      uses: docker/build-push-action@v2
+      with:
+          context: .
+          file: ./Dockerfile.aarch64
+          platforms: linux/arm/v8
+          push: True
+          tags: |
+           ${{ github.repository }}:arm64v8-latest
+    - 
+      name: Build the Docker arm
+      uses: docker/build-push-action@v2
+      with:
+          context: .
+          file: ./Dockerfile.armhf
+          platforms: linux/arm64
+          push: True
+          tags: |
+           ${{ github.repository }}:arm-latest
