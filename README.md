@@ -3,7 +3,13 @@
 
 
 # docker-qbittorrent-nordvpn
-Combines linuxserver/qbittorrent with nordvpn and script from wizz752, daily build from latest linuxserver/qbittorrent and latest nordvpn-cli
+Combines linuxserver/qbittorrent with nordvpn and script from wizz752, daily build from latest linuxserver/qbittorrent and latest nordvpn-cli.
+
+| Architecture | Tag |
+| :----: | --- |
+| x64 | latest |
+| arm64 | latest |
+| armhf | latest |
 
 
 # Use docker compose to deploy
