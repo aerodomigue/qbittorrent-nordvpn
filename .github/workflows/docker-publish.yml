@@ -1,4 +1,4 @@
-name: Build docker image and push
+name: Daily build and push
 
 on:
   push:
