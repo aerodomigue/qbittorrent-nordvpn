@@ -1,10 +1,9 @@
-name: Build docker image
+name: Build test
 
 on:
   push:
-    branches-ignore:
-    - master
-  
+    branches:
+    - '!master'
   
 jobs:
   build:
