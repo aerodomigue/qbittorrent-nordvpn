@@ -38,7 +38,7 @@ jobs:
           tags: |
            ${{ github.repository }}:latest
     - 
-      name: Build the Docker image all latest
+      name: Build the Docker image amd64 latest
       uses: docker/build-push-action@v2
       with:
           context: .
