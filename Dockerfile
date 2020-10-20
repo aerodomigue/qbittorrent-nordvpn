@@ -2,7 +2,7 @@ FROM linuxserver/qbittorrent:latest
 
 LABEL maintainer="aerodomigue"
 ARG TARGETARCH
-RUN echo "Building for $TARGETPLATFORM"
+RUN echo "Building for $TARGETARCH"
 
 HEALTHCHECK --interval=1m --timeout=20s --start-period=1m \
 CMD /health-check.sh
