@@ -1,8 +1,6 @@
-![Build docker image and push](https://github.com/aerodomigue/qbittorrent-nordvpn/workflows/Build%20docker%20image/badge.svg)   
-![Daily build and push](https://github.com/aerodomigue/qbittorrent-nordvpn/workflows/Daily%20build%20and%20push/badge.svg)
+# Qbittorrent-nordvpn
+![Build docker image and push](https://github.com/aerodomigue/qbittorrent-nordvpn/workflows/Build%20docker%20image/badge.svg)   ![Daily build and push](https://github.com/aerodomigue/qbittorrent-nordvpn/workflows/Daily%20build%20and%20push/badge.svg)  
 
-
-# docker-qbittorrent-nordvpn
 Combines linuxserver/qbittorrent with nordvpn and script from wizz752, daily build from latest linuxserver/qbittorrent and latest nordvpn-cli.
 
 | Architecture | Tag |
